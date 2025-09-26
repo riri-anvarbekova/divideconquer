@@ -22,10 +22,9 @@ public final class QuickSort {
 
             m.enter();
             int p = partitionRandom(a, lo, hi, m);
-// Recurse on smaller side; iterate on larger
             if (p - lo < hi - p) {
                 qs(a, lo, p - 1, m);
-                lo = p + 1; // tail-iterate large side
+                lo = p + 1;
             } else {
                 qs(a, p + 1, hi, m);
                 hi = p - 1;

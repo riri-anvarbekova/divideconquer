@@ -70,7 +70,7 @@ public final class ClosestPair2D {
 
 
     private static double dist(Pt a, Pt b, Metrics m) {
-        m.addCmp(2); // two comparisons worth of arithmetic work proxy
+        m.addCmp(2);
         double dx = a.x - b.x, dy = a.y - b.y;
         return Math.hypot(dx, dy);
     }

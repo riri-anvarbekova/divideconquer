@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 
 public final class MergeSort {
-    private static final int INSERTION_CUTOFF = 24; // tune by measurement
+    private static final int INSERTION_CUTOFF = 24;
 
 
     public static <T extends Comparable<T>> void sort(T[] a, Metrics m) {

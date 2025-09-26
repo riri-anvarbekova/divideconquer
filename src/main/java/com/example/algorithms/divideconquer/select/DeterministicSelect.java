@@ -6,7 +6,6 @@ import java.util.Arrays;
 
 
 public final class DeterministicSelect {
-    // Returns the k-th smallest (0-based) in a[lo..hi]
     public static <T extends Comparable<T>> T select(T[] a, int lo, int hi, int k, Metrics m) {
         if (k < lo || k > hi) throw new IllegalArgumentException("k out of range");
         while (true) {
@@ -35,12 +34,10 @@ public final class DeterministicSelect {
             int median = i + (r - i) / 2;
             swap(a, write++, median, m);
         }
-// recursively select median of the medians segment
         return selectIndex(a, lo, write - 1, (write - lo)/2, m);
     }
 
 
-    // helper: returns index of k-th smallest, does not count maxDepth twice
     private static <T extends Comparable<T>> int selectIndex(T[] a, int lo, int hi, int kOffset, Metrics m) {
         while (true) {
             if (lo == hi) return lo;

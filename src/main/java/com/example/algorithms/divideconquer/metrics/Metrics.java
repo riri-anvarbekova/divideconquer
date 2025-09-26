@@ -3,7 +3,7 @@ package com.example.algorithms.divideconquer.metrics;
 
 public final class Metrics {
     public long comparisons;
-    public long moves; // element writes (or swaps count as 3 writes if you prefer)
+    public long moves;
     public int maxDepth;
 
 
