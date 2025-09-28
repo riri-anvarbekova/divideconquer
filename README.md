@@ -5,6 +5,36 @@
 - Analyze running-time recurrences using Master Theorem (3 cases) and Akra–Bazzi intuition; validate with experimental measurements.  
 - Collect metrics (time, recursion depth, comparisons/allocations) and report results with plots and discussion.  
 - Maintain clean Git history with feature branches and proper commit storyline.  
+---
+### Execution Time (time vs. n)
+
+![Time vs. n](time_vs_n.png)
+
+Parameters (English):
+- **X**: Input size `n`
+- **Y**: Execution time (ms)
+- **Lines**: Merge Sort, QuickSort, Select, Closest Pair.
+
+**Observations:**
+- **MergeSort**: Shows consistent O(n log n) performance
+- **QuickSort**: Faster than MergeSort on average, but with more variability.
+- **Select**: Shows a linear O(n) scheme for finding the median.
+- **ClosestPair**: Has O(n log n) performance, but with the specified constants.
+
+### Recursion depth (depth vs. n)
+
+![Depth vs. n](depth_vs_n.png)
+
+Parameters (English):
+- **X**: Input size `n`
+- **Y**: Recursion depth.
+- **Lines**: Merge sort, quicksort, selection, closest pair.
+
+**Observations:**
+- **MergeSort**: Recursion depth grows as log₂(n)
+- **QuickSort**: Depth depends on the quality of the pivot selection.
+- **Select**: Very shallow recursion depth due to deterministic selection.
+- **ClosestPair**: Depth grows as log₂(n) due to bisection
 
 ---
 
